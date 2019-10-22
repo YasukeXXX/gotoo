@@ -5,6 +5,7 @@ import (
 	"reflect"
 )
 
+// CopyFields copy struct field to another struct when target struct contain fields taht name is same with source struct.
 func CopyFields(source interface{}, target interface{}) (interface{}, error) {
 	sv, tv := reflect.ValueOf(source), reflect.ValueOf(target)
 	o := reflect.New(reflect.TypeOf(target))

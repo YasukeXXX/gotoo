@@ -21,10 +21,9 @@ func ExampleCopyFields() {
 	t, err := gotoo.CopyFields(Source{"name", "email@example.com", "password"}, Target{})
 	if err != nil {
 		fmt.Print(err)
-		return
 	}
 	if target, ok := t.(*Target); ok {
 		fmt.Printf("%#v", target)
 	}
-	return
+	// Output: &main.Target{Name:"name", Email:"email@example.com", Age:0}
 }
